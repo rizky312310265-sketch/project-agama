@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran Islam - Portal Pendidikan Agama</title>
+    <meta name="theme-color" content="#1a5f3f">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Building Base -->
+                    <rect x="15" y="35" width="70" height="55" fill="white" stroke="white" stroke-width="1.5"/>
+                    <!-- Roof -->
+                    <polygon points="15,35 50,10 85,35" fill="#1a5f3f" stroke="white" stroke-width="1.5"/>
+                    <!-- Door -->
+                    <rect x="42" y="60" width="16" height="28" fill="#d4af37" stroke="white" stroke-width="1"/>
+                    <circle cx="55" cy="72" r="1.5" fill="white"/>
+                    <!-- Windows Row 1 -->
+                    <rect x="22" y="42" width="8" height="8" fill="#d4af37" stroke="white" stroke-width="0.8"/>
+                    <rect x="36" y="42" width="8" height="8" fill="#d4af37" stroke="white" stroke-width="0.8"/>
+                    <rect x="50" y="42" width="8" height="8" fill="#d4af37" stroke="white" stroke-width="0.8"/>
+                    <rect x="64" y="42" width="8" height="8" fill="#d4af37" stroke="white" stroke-width="0.8"/>
+                    <!-- Windows Row 2 -->
+                    <rect x="22" y="57" width="8" height="8" fill="#d4af37" stroke="white" stroke-width="0.8"/>
+                    <rect x="64" y="57" width="8" height="8" fill="#d4af37" stroke="white" stroke-width="0.8"/>
+                    <!-- Flag on roof -->
+                    <line x1="50" y1="10" x2="50" y2="3" stroke="white" stroke-width="1.2"/>
+                    <polygon points="50,3 56,5 50,7" fill="#d4af37"/>
+                </svg>
+                <span class="logo-text">Islamic Learning Hub</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#artikel">Artikel</a></li>
+                <li><a href="#task">Pengumpulan Tugas</a></li>
+                <li><a href="#creator">Pembuat</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Creator Info Banner -->
+    <div class="creator-banner">
+        <div class="container">
+            <div class="creator-info">
+                <div class="creator-badge">
+                    <span class="creator-icon">👤</span>
+                    <div>
+                        <span class="creator-label">Dibuat Oleh</span>
+                        <span class="creator-name">Rizky Kurnia</span>
+                    </div>
+                </div>
+                <div class="creator-nim">
+                    <span class="nim-label">NIM</span>
+                    <span class="nim-value">312310265</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Pembelajaran Islam Profesional</h1>
+                <p>Platform edukasi agama Islam terpercaya untuk memperdalam pemahaman ajaran dan nilai-nilai spiritual secara efektif</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('task').scrollIntoView({behavior: 'smooth'})">
+                        Kumpulkan Tugas
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                        Pelajari Lebih Lanjut
+                    </button>
+                </div>
+                <div class="hero-metrics" aria-label="Ringkasan platform">
+                    <div class="metric-card">
+                        <span class="metric-value">5+</span>
+                        <span class="metric-label">Kategori Artikel</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-value" id="submissionMetric">0</span>
+                        <span class="metric-label">Tugas Terkumpul</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-value" id="artikelMetric">0</span>
+                        <span class="metric-label">Artikel Tersimpan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>Tentang Platform Kami</h2>
+                <p>Platform pembelajaran agama Islam yang dirancang untuk membantu memperdalam pemahaman ajaran Islam dengan mudah.</p>
+                
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="feature-icon">📖</div>
+                        <h3>Materi Lengkap</h3>
+                        <p>Akses berbagai topik pembelajaran Islam</p>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon">📤</div>
+                        <h3>Pengumpulan Terstruktur</h3>
+                        <p>Kirim tugas dengan data yang rapi dan mudah dipantau</p>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon">✨</div>
+                        <h3>User Friendly</h3>
+                        <p>Interface yang simple dan mudah digunakan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artikel Section -->
+    <section id="artikel" class="artikel-section">
+        <div class="container">
+            <h2 class="section-title">Artikel Pembelajaran</h2>
+            <div class="section-toolbar">
+                <div>
+                    <span class="section-counter"><span id="artikelCount">0</span> artikel tersimpan</span>
+                </div>
+                <div class="toolbar-actions">
+                    <div class="search-box">
+                        <span>⌕</span>
+                        <input type="search" id="artikelSearch" placeholder="Cari judul atau kategori..." oninput="searchArtikel(this.value)">
+                    </div>
+                    <button type="button" class="btn btn-secondary" onclick="scrollToSubmissionForm()">Ke Pengumpulan</button>
+                </div>
+            </div>
+
+            <!-- Form Tambah Artikel -->
+            <div class="artikel-form-container">
+                <form id="artikelForm" class="artikel-form">
+                    <input type="text" id="artikelJudul" placeholder="Judul artikel..." required>
+                    <textarea id="artikelDeskripsi" placeholder="Isi artikel..." rows="4" required></textarea>
+                    <select id="artikelKategori" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="Aqidah">Aqidah</option>
+                        <option value="Fiqih">Fiqih</option>
+                        <option value="Hadis">Hadis</option>
+                        <option value="Akhlak">Akhlak</option>
+                        <option value="Sejarah Islam">Sejarah Islam</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" onclick="tambahArtikel()">Tambah Artikel</button>
+                </form>
+            </div>
+
+            <!-- List Artikel -->
+            <div class="artikel-list-container">
+                <ul id="artikelList" class="artikel-list"></ul>
+                <div id="emptyArtikel" class="empty-state">
+                    <p>Belum ada artikel. Mulai dengan menambahkan artikel baru!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengumpulan Tugas Section -->
+    <section id="task" class="task-section">
+        <div class="container">
+            <h2 class="section-title">Pengumpulan Tugas</h2>
+            <div class="section-toolbar task-toolbar">
+                <div>
+                    <span class="section-counter"><span id="submissionCount">0</span> pengumpulan tersimpan</span>
+                </div>
+                <div class="toolbar-actions">
+                    <div class="search-box">
+                        <span>⌕</span>
+                        <input type="search" id="submissionSearch" placeholder="Cari nama atau judul tugas" oninput="searchSubmission(this.value)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-input-container">
+                <form id="submissionForm" class="task-form">
+                    <div class="form-row">
+                        <input type="text" id="submissionStudent" placeholder="Nama siswa" required>
+                        <input type="text" id="submissionClass" placeholder="Kelas" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="submissionTitle" placeholder="Judul tugas" required>
+                        <select id="submissionSubject" required>
+                            <option value="">Pilih mata pelajaran</option>
+                            <option value="Aqidah">Aqidah</option>
+                            <option value="Fiqih">Fiqih</option>
+                            <option value="Hadis">Hadis</option>
+                            <option value="Akhlak">Akhlak</option>
+                            <option value="Sejarah Islam">Sejarah Islam</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <input type="date" id="submissionDeadline" required>
+                        <input type="file" id="submissionFile" accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="submitSubmission()">Kirim Tugas</button>
+                </form>
+            </div>
+
+            <div class="task-list-container">
+                <div class="task-filters">
+                    <button class="filter-btn active" onclick="filterSubmission('semua', this)">Semua</button>
+                    <button class="filter-btn" onclick="filterSubmission('dikirim', this)">Dikirim</button>
+                    <button class="filter-btn" onclick="filterSubmission('direview', this)">Direview</button>
+                    <button class="filter-btn" onclick="filterSubmission('selesai', this)">Selesai</button>
+                </div>
+
+                <ul id="submissionList" class="task-list"></ul>
+
+                <div id="emptySubmission" class="empty-state">
+                    <p>Belum ada pengumpulan tugas. Silakan kirim tugas pertama Anda.</p>
+                </div>
+            </div>
+
+            <div class="task-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalSubmission">0</div>
+                    <div class="stat-label">Total Pengumpulan</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="sentSubmission">0</div>
+                    <div class="stat-label">Dikirim</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="reviewSubmission">0</div>
+                    <div class="stat-label">Direview</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="doneSubmission">0</div>
+                    <div class="stat-label">Selesai</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator Section -->
+    <section id="creator" class="creator-section">
+        <div class="container">
+            <h2 class="section-title">Tentang Pembuat Aplikasi</h2>
+            <div class="creator-details">
+                <div class="creator-card">
+                    <div class="creator-avatar">
+                        <span class="avatar-icon">👨‍💼</span>
+                    </div>
+                    <div class="creator-bio">
+                        <h3>Rizky Kurnia</h3>
+                        <div class="bio-item">
+                            <span class="bio-label">NIM:</span>
+                            <span class="bio-value">312310265</span>
+                        </div>
+                        <div class="bio-item">
+                            <span class="bio-label">Program Studi:</span>
+                            <span class="bio-value">Informatika / Teknik Informatika</span>
+                        </div>
+                        <div class="bio-item">
+                            <span class="bio-label">Institusi:</span>
+                            <span class="bio-value">Universitas Pelita Bangsa</span>
+                        </div>
+                        <div class="bio-item">
+                            <span class="bio-label">Email:</span>
+                            <span class="bio-value"><a href="mailto:rizkikurnia309@gmail.com">rizkikurnia309@gmail.com</a></span>
+                        </div>
+                        <p class="creator-description">
+                            Mahasiswa Teknik Informatika yang bersemangat dalam mengembangkan solusi teknologi untuk pendidikan. 
+                            Platform ini dibuat sebagai proyek pembelajaran untuk mendemonstrasikan kemampuan dalam web development 
+                            dan pemahaman kebutuhan pengguna dalam konteks pendidikan agama Islam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Islamic Learning Hub</h4>
+                    <p>Platform pembelajaran agama Islam yang berkelanjutan dan profesional untuk menunjang pendidikan spiritual dan akademik.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak Pembuat</h4>
+                    <p><strong>Nama:</strong> Rizky Kurnia</p>
+                    <p><strong>NIM:</strong> 312310265</p>
+                    <p>📧 <a href="mailto:rizkikurnia309@gmail.com">rizkikurnia309@gmail.com</a></p>
+                    <p>📱 <a href="https://wa.me/6289606114306" class="whatsapp-link" target="_blank">+62 896 0611 4306</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#artikel">Artikel</a></li>
+                        <li><a href="#task">Pengumpulan Tugas</a></li>
+                        <li><a href="#creator">Pembuat</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Islamic Learning Hub | Dibuat oleh <strong>Rizky Kurnia (312310265)</strong></p>
+                <p class="footer-tech">Developed with HTML5, CSS3 & Vanilla JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Edit Artikel -->
+    <div id="editArtikelModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Artikel</h2>
+                <span class="close" onclick="closeArtikelModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="editArtikelJudul" placeholder="Judul artikel..." class="task-input">
+                <textarea id="editArtikelDeskripsi" placeholder="Isi artikel..." rows="4" class="task-input"></textarea>
+                <select id="editArtikelKategori" class="task-input">
+                    <option value="Aqidah">Aqidah</option>
+                    <option value="Fiqih">Fiqih</option>
+                    <option value="Hadis">Hadis</option>
+                    <option value="Akhlak">Akhlak</option>
+                    <option value="Sejarah Islam">Sejarah Islam</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeArtikelModal()">Batal</button>
+                <button class="btn btn-primary" onclick="simpanEditArtikel()">Simpan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edit Pengumpulan -->
+    <div id="editSubmissionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Pengumpulan Tugas</h2>
+                <span class="close" onclick="closeSubmissionModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="editSubmissionStudent" class="task-input" placeholder="Nama siswa">
+                <input type="text" id="editSubmissionClass" class="task-input" placeholder="Kelas">
+                <input type="text" id="editSubmissionTitle" class="task-input" placeholder="Judul tugas">
+                <select id="editSubmissionSubject" class="task-input">
+                    <option value="Aqidah">Aqidah</option>
+                    <option value="Fiqih">Fiqih</option>
+                    <option value="Hadis">Hadis</option>
+                    <option value="Akhlak">Akhlak</option>
+                    <option value="Sejarah Islam">Sejarah Islam</option>
+                </select>
+                <input type="date" id="editSubmissionDeadline" class="task-input">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeSubmissionModal()">Batal</button>
+                <button class="btn btn-primary" onclick="saveSubmissionEdit()">Simpan Perubahan</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
